@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
 }
-
+ 
 :root {
   /* Brighter, warmer palette */
   --bg: #f2ede4;
@@ -23,11 +23,11 @@
   --gap: clamp(24px, 5vw, 80px);
   --max: 1200px;
 }
-
+ 
 html {
   scroll-behavior: smooth;
 }
-
+ 
 body {
   background: var(--bg);
   color: var(--text);
@@ -38,19 +38,19 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-
+ 
 img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
+ 
 a {
   color: inherit;
   text-decoration: none;
 }
-
+ 
 /* =============================================
    NAV
    ============================================= */
@@ -68,7 +68,7 @@ nav {
   backdrop-filter: blur(0px);
   transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
-
+ 
 .nav-name {
   font-family: var(--font-mono);
   font-size: 16px;
@@ -77,13 +77,13 @@ nav {
   color: #e8e1d5;
   font-weight: bold;
 }
-
+ 
 nav ul {
   list-style: none;
   display: flex;
   gap: 40px;
 }
-
+ 
 nav ul li a {
   font-family: var(--font-mono);
   font-size: 14px;
@@ -92,7 +92,7 @@ nav ul li a {
   color: #ffffff;
   transition: color 0.3s ease;
 }
-
+ 
 /* =============================================
    HERO
    ============================================= */
@@ -102,7 +102,7 @@ nav ul li a {
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
 }
-
+ 
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -112,7 +112,7 @@ nav ul li a {
   z-index: 2;
   background: linear-gradient(to right, var(--bg) 70%, transparent 100%);
 }
-
+ 
 .hero-label {
   font-family: var(--font-mono);
   font-size: 20px;
@@ -123,7 +123,7 @@ nav ul li a {
   opacity: 0;
   animation: fadeUp 1s ease 0.3s forwards;
 }
-
+ 
 .hero h1 {
   font-family: var(--font-display);
   font-size: clamp(56px, 7vw, 96px);
@@ -134,7 +134,7 @@ nav ul li a {
   opacity: 0;
   animation: fadeUp 1s ease 0.5s forwards;
 }
-
+ 
 .hero h2 {
   font-family: var(--font-display);
   font-size: clamp(56px, 7vw, 96px);
@@ -145,12 +145,12 @@ nav ul li a {
   opacity: 0;
   animation: fadeUp 1s ease 0.5s forwards;
 }
-
+ 
 .hero h1 em {
   font-style: italic;
   color: var(--accent-light);
 }
-
+ 
 .hero-sub {
   margin-top: 32px;
   color: var(--muted);
@@ -159,14 +159,14 @@ nav ul li a {
   opacity: 0;
   animation: fadeUp 1s ease 0.7s forwards;
 }
-
+ 
 .hero-img {
   position: relative;
   overflow: hidden;
   opacity: 0;
   animation: fadeIn 1.4s ease 0.4s forwards;
 }
-
+ 
 .hero-img img {
   width: 100%;
   height: 100%;
@@ -175,14 +175,14 @@ nav ul li a {
   filter: brightness(0.92) contrast(1.05);
   transition: filter 0.6s ease, transform 0.8s ease;
 }
-
+ 
 .hero-img-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, var(--bg) 0%, transparent 35%);
   pointer-events: none;
 }
-
+ 
 /* =============================================
    PHOTO BREAK — full-width cinematic strip
    ============================================= */
@@ -193,7 +193,7 @@ nav ul li a {
   overflow: hidden;
   margin: 0;
 }
-
+ 
 .photo-break img {
   width: 100%;
   height: 100%;
@@ -203,11 +203,11 @@ nav ul li a {
   transform: scale(1.02);
   transition: transform 8s ease;
 }
-
+ 
 .photo-break:hover img {
   transform: scale(1.0);
 }
-
+ 
 .photo-break-caption {
   position: absolute;
   bottom: 28px;
@@ -218,7 +218,7 @@ nav ul li a {
   text-transform: uppercase;
   color: rgba(240, 236, 226, 0.55);
 }
-
+ 
 /* =============================================
    SECTIONS SHARED
    ============================================= */
@@ -229,21 +229,21 @@ nav ul li a {
   margin: 0 auto;
   padding: 80px 48px;
 }
-
+ 
 .section-header {
   display: flex;
   align-items: center;
   gap: 24px;
   margin-bottom: 48px;
 }
-
+ 
 .section-header::after {
   content: '';
   flex: 1;
   height: 1px;
   background: var(--border);
 }
-
+ 
 .label {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -251,7 +251,7 @@ nav ul li a {
   text-transform: uppercase;
   color: var(--accent);
 }
-
+ 
 h2 {
   font-family: var(--font-display);
   font-size: clamp(40px, 5vw, 72px);
@@ -260,12 +260,12 @@ h2 {
   margin-bottom: 32px;
   color: var(--text);
 }
-
+ 
 h2 em {
   font-style: italic;
   color: var(--accent-light);
 }
-
+ 
 /* =============================================
    VIDEO GRID
    ============================================= */
@@ -274,18 +274,30 @@ h2 em {
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 }
-
+ 
+.video-grid.grid-2 .video-item-wide {
+  grid-column: 1 / -1;
+}
+ 
+.video-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+ 
 .video-item {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
+ 
 .video-item.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
+ 
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -293,7 +305,7 @@ h2 em {
   background: var(--surface);
   overflow: hidden;
 }
-
+ 
 .video-wrapper iframe {
   position: absolute;
   inset: 0;
@@ -301,7 +313,7 @@ h2 em {
   height: 100%;
   border: none;
 }
-
+ 
 .video-meta {
   display: flex;
   align-items: center;
@@ -311,24 +323,24 @@ h2 em {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-
+ 
 .video-role {
   color: var(--text);
 }
-
+ 
 .video-divider {
   color: var(--muted);
 }
-
+ 
 .video-year {
   color: var(--muted);
 }
-
+ 
 /* Instagram cards */
 .ig-link {
   display: block;
 }
-
+ 
 .ig-thumb {
   position: relative;
   width: 100%;
@@ -336,7 +348,7 @@ h2 em {
   overflow: hidden;
   background: var(--surface);
 }
-
+ 
 .ig-thumb img {
   position: absolute;
   inset: 0;
@@ -346,12 +358,12 @@ h2 em {
   filter: brightness(0.65);
   transition: filter 0.4s ease, transform 0.6s ease;
 }
-
+ 
 .ig-link:hover .ig-thumb img {
   filter: brightness(0.45);
   transform: scale(1.04);
 }
-
+ 
 .ig-play {
   position: absolute;
   inset: 0;
@@ -362,20 +374,20 @@ h2 em {
   gap: 10px;
   color: white;
 }
-
+ 
 .ig-play svg {
   width: 48px;
   height: 48px;
   opacity: 0.92;
 }
-
+ 
 .ig-play span {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 0.72;
 }
-
+ 
 /* =============================================
    RESUME
    ============================================= */
@@ -385,23 +397,23 @@ h2 em {
   padding: 80px 48px;
   border-top: 1px solid var(--border);
 }
-
+ 
 .resume-wrap {
   max-width: 860px;
 }
-
+ 
 .resume-header {
   margin-bottom: 48px;
 }
-
+ 
 .resume-dot {
   color: var(--border);
 }
-
+ 
 .resume-block {
   margin-bottom: 48px;
 }
-
+ 
 .resume-section-title {
   font-family: var(--font-mono);
   font-size: 20px;
@@ -412,11 +424,11 @@ h2 em {
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
 }
-
+ 
 .resume-entry {
   margin-bottom: 32px;
 }
-
+ 
 .resume-entry-top {
   display: flex;
   justify-content: space-between;
@@ -424,20 +436,20 @@ h2 em {
   gap: 16px;
   margin-bottom: 4px;
 }
-
+ 
 .resume-org {
   font-family: var(--font-mono);
   font-size: 20px;
   color: var(--text);
   font-weight: 400;
 }
-
+ 
 .resume-role {
   font-family: var(--font-mono);
   font-size: 16px;
   color: var(--muted);
 }
-
+ 
 .resume-location,
 .resume-date {
   font-family: var(--font-mono);
@@ -446,13 +458,13 @@ h2 em {
   white-space: nowrap;
   letter-spacing: 0.05em;
 }
-
+ 
 .resume-detail {
   font-size: 16px;
   color: var(--muted);
   margin-top: 6px;
 }
-
+ 
 .resume-bullets {
   list-style: none;
   margin-top: 10px;
@@ -460,7 +472,7 @@ h2 em {
   flex-direction: column;
   gap: 6px;
 }
-
+ 
 .resume-bullets li {
   font-size: 15px;
   color: var(--muted);
@@ -468,57 +480,57 @@ h2 em {
   padding-left: 16px;
   position: relative;
 }
-
+ 
 .resume-bullets li::before {
   content: '–';
   position: absolute;
   left: 0;
   color: var(--accent);
 }
-
+ 
 .resume-skills {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-
+ 
 .resume-skill-row {
   display: flex;
   gap: 24px;
   font-size: 15px;
   align-items: baseline;
 }
-
+ 
 .skill-category {
   font-family: var(--font-mono);
   color: var(--text);
   min-width: 100px;
   letter-spacing: 0.08em;
 }
-
+ 
 .skill-value {
   color: var(--muted);
   line-height: 1.6;
 }
-
+ 
 @media (max-width: 600px) {
   .resume-entry-top {
     flex-direction: column;
     gap: 2px;
   }
-
+ 
   .resume-skill-row {
     flex-direction: column;
     gap: 4px;
   }
 }
-
+ 
 .about-img {
   aspect-ratio: 3/4;
   overflow: hidden;
   background: var(--surface);
 }
-
+ 
 .about-img img {
   width: 100%;
   height: 100%;
@@ -526,17 +538,17 @@ h2 em {
   object-position: center top;
   transition: transform 0.7s ease;
 }
-
+ 
 .about-img:hover img {
   transform: scale(1.03);
 }
-
+ 
 .about-text .label {
   display: block;
   margin-bottom: 24px;
 }
-
-
+ 
+ 
 /* ---- BTS duo below about copy ---- */
 .about-bts {
   display: grid;
@@ -544,7 +556,7 @@ h2 em {
   gap: 16px;
   margin-top: 64px;
 }
-
+ 
 .about-bts-img {
   position: relative;
   overflow: hidden;
@@ -554,12 +566,12 @@ h2 em {
   transform: translateY(16px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
+ 
 .about-bts-img.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
+ 
 .about-bts-img img {
   width: 100%;
   height: 100%;
@@ -567,7 +579,7 @@ h2 em {
   filter: brightness(0.9);
   transition: transform 0.7s ease, filter 0.4s ease;
 }
-
+ 
 .bts-label {
   position: absolute;
   bottom: 16px;
@@ -578,23 +590,23 @@ h2 em {
   text-transform: uppercase;
   color: rgba(240, 236, 226, 0.5);
 }
-
+ 
 /* =============================================
    CONTACT
    ============================================= */
 #contact {
   border-top: 1px solid var(--border);
 }
-
+ 
 .contact-inner {
   max-width: 600px;
 }
-
+ 
 .contact-inner .label {
   display: block;
   margin-bottom: 24px;
 }
-
+ 
 .email-link {
   display: inline-block;
   font-family: var(--font-display);
@@ -607,16 +619,16 @@ h2 em {
   transition: opacity 0.3s;
   letter-spacing: 0.02em;
 }
-
+ 
 .email-link:hover {
   opacity: 0.7;
 }
-
+ 
 .social-links {
   display: flex;
   gap: 32px;
 }
-
+ 
 .social-links a {
   font-size: 11px;
   letter-spacing: 0.2em;
@@ -624,11 +636,11 @@ h2 em {
   color: var(--muted);
   transition: color 0.3s;
 }
-
+ 
 .social-links a:hover {
   color: var(--text);
 }
-
+ 
 /* =============================================
    FOOTER
    ============================================= */
@@ -642,7 +654,7 @@ footer {
   letter-spacing: 0.1em;
   color: var(--muted);
 }
-
+ 
 /* =============================================
    ANIMATIONS
    ============================================= */
@@ -651,23 +663,23 @@ footer {
     opacity: 0;
     transform: translateY(24px);
   }
-
+ 
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
+ 
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-
+ 
   to {
     opacity: 1;
   }
 }
-
+ 
 /* =============================================
    RESPONSIVE
    ============================================= */
@@ -675,54 +687,54 @@ footer {
   nav {
     padding: 24px;
   }
-
+ 
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
   }
-
+ 
   .hero-text {
     padding: 120px 24px 48px;
     background: none;
   }
-
+ 
   .hero-img {
     height: 60vw;
     min-height: 300px;
   }
-
+ 
   .hero-img-overlay {
     background: linear-gradient(to bottom, var(--bg) 0%, transparent 30%);
   }
-
+ 
   #work,
   #resume,
   #contact {
     padding: 60px 24px;
   }
-
+ 
   .video-grid {
     grid-template-columns: 1fr;
   }
-
+ 
   .about-inner {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
+ 
   .about-img {
     aspect-ratio: 4/3;
   }
-
+ 
   .about-bts {
     grid-template-columns: 1fr;
     margin-top: 40px;
   }
-
+ 
   .about-bts-img {
     height: 260px;
   }
-
+ 
   footer {
     flex-direction: column;
     gap: 8px;
@@ -730,12 +742,12 @@ footer {
     padding: 24px;
   }
 }
-
+ 
 @media (max-width: 520px) {
   nav ul {
     gap: 20px;
   }
-
+ 
   .photo-break {
     height: 240px;
   }
